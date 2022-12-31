@@ -1,8 +1,15 @@
 import { BaseTypesProps } from '@base/BaseTypes/types'
-import { BaseFontWeight } from '@base/BaseTypography/types'
 
 export type BaseTextProps = {
 	text: string | number
+	textColor:
+		| '--primary-text'
+		| '--secondary-text'
+		| '--tertiary-text'
+		| '--quaternaryText'
+		| '--info'
+		| '--warning'
+		| '--error'
 } & Omit<BaseTypesProps, 'children' | 'label'>
 
 export type BaseTextStyles = { disableColor: string } & Pick<

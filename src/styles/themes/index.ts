@@ -13,6 +13,8 @@ export const CommonsTheme: ThemeApp = {
 	hoverAndSelectionPrimary: 'rgba(255,225,225,0.1)',
 	hoverAndSelectionSecondary: 'rgba(255,225,225,0.1)',
 	inputColor: 'rgba(65,65,65,0.03)',
+	disable: 'rgba(66, 65, 65, 0.08)',
+	disableText: 'var(--quaternaryText)',
 }
 
 export const DarkTheme: ThemeApp = {
@@ -27,5 +29,7 @@ export const DarkTheme: ThemeApp = {
 	hoverAndSelection: 'rgba(8,193,221,0.1)',
 	hoverAndSelectionPrimary: 'rgba(65,65,65,0.1)',
 	hoverAndSelectionSecondary: 'rgba(65,65,65,0.1)',
-	inputColor: 'rgba(65,65,65,0.03)',
+	inputColor: 'rgba(255,255,255,0.03)',
+	disable: 'rgba(255,255,255, 0.08)',
+	disableText: 'var(--quaternaryText)',
 }

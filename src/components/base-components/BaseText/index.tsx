@@ -12,6 +12,7 @@ const BaseText: React.FC<BaseTextProps> = ({
 	width,
 	height,
 	disable = false,
+	textColor = '--primary-text',
 }) => {
 	return (
 		<StyContainer
@@ -21,7 +22,7 @@ const BaseText: React.FC<BaseTextProps> = ({
 			fontWeight={fontWeight}
 			width={width}
 			height={height}
-			disableColor={checkDisableText(disable)}
+			disableColor={checkDisableText(disable, textColor)}
 		>
 			{text}
 		</StyContainer>

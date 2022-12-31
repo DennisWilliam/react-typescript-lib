@@ -2,6 +2,8 @@ type ThemeInteractions = {
 	hoverAndSelection: string
 	hoverAndSelectionPrimary: string
 	hoverAndSelectionSecondary: string
+	disable: string
+	disableText: string
 }
 
 export type ThemeApp = {

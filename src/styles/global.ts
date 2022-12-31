@@ -40,7 +40,9 @@ export default createGlobalStyle<GlobalProps>`
 		--secondary-text:${({ theme }) => theme.secondary}
 		--tertiary-text:${({ theme }) => theme.tertiaryText}
 		--quaternary-text:${({ theme }) => theme.quaternaryText}
-	
+		--disable:${({ theme }) => theme.disable}
+		--disable-text:${({ theme }) => theme.disableText}
+
 		//Messages
 		--success:(${({ theme }) => theme.primary})
 		--error:(${({ theme }) => theme.primary})

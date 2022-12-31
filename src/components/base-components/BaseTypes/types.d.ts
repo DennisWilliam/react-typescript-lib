@@ -28,6 +28,7 @@ export type BaseTypesProps = {
 	width?: string | number
 	height?: string | number
 	children?: React.ReactNode
+	isLoading?: boolean
 } & BaseRequiredTypesProps &
 	BaseInteractionsTypesProps
 
@@ -51,4 +52,22 @@ export type BaseInteractionsTypesProps = {
 	focusColor: string
 	disable: boolean
 	disableColor: string
+}
+
+/**
+ * BaseDirectionTypesProps is some of most common direction types used to props HstUi components.
+ *  @param {string} direction - Receive one of the four directions (top,right,bottom,left).
+ */
+export type BaseDirectionTypesProps = {
+	direction: string
+}
+
+/**
+ * BaseSpacingTypesProps is some of most common spacing types used to props HstUi components.
+ *  @param {string} padding - Receive component padding. ex 10, 10, 10, 10 or only 10 to apply the same value on all sides
+ * @param {string} padding - Receive component margin. ex 10, 10, 10, 10 or only 10 to apply the same value on all sides
+ */
+export type BaseSpacingTypesProps = {
+	padding: string
+	margin: string
 }
