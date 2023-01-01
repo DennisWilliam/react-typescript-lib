@@ -1,12 +1,12 @@
-import { BaseFontWeight } from '@base/BaseTypography/types'
+import { BaseFontWeight } from "@base/BaseTypography/types";
 
 /**
  * BaseRequiredTypesProps is some of most common required types used to props HstUi components.
  *  @param {id} id - The component identification.
  */
 export type BaseRequiredTypesProps = {
-	id: string
-}
+  id: string;
+};
 
 /**
  * BaseTypesProps is some of most common types used to props HstUi components.
@@ -20,17 +20,17 @@ export type BaseRequiredTypesProps = {
  * @param {React.ReactNode} children - The author of the book.
  */
 export type BaseTypesProps = {
-	key?: string | number
-	label?: string | number
-	fontSize?: number | string
-	color?: string
-	fontWeight?: keyof BaseFontWeight | string
-	width?: string | number
-	height?: string | number
-	children?: React.ReactNode
-	isLoading?: boolean
+  key?: string | number;
+  label?: string | number;
+  fontSize?: number | string;
+  color?: string;
+  fontWeight?: keyof BaseFontWeight | string;
+  width?: string | number;
+  height?: string | number;
+  children?: React.ReactNode;
+  isLoading?: boolean;
 } & BaseRequiredTypesProps &
-	BaseInteractionsTypesProps
+  BaseInteractionsTypesProps;
 
 /**
  * BaseInteractionsTypesProps is some of most common interaction types used to props HstUi components.
@@ -44,23 +44,23 @@ export type BaseTypesProps = {
  * @param {boolean} disableColor - Inform if the  component color when it is with disable effect.
  */
 export type BaseInteractionsTypesProps = {
-	isHover: boolean
-	hoverColor: string
-	isActive: boolean
-	activeColor: string
-	hasFocus: boolean
-	focusColor: string
-	disable: boolean
-	disableColor: string
-}
+  isHover: boolean;
+  hoverColor: string;
+  isActive: boolean;
+  activeColor: string;
+  hasFocus: boolean;
+  focusColor: string;
+  disable: boolean;
+  disableColor: string;
+};
 
 /**
  * BaseDirectionTypesProps is some of most common direction types used to props HstUi components.
  *  @param {string} direction - Receive one of the four directions (top,right,bottom,left).
  */
 export type BaseDirectionTypesProps = {
-	direction: string
-}
+  direction: string;
+};
 
 /**
  * BaseSpacingTypesProps is some of most common spacing types used to props HstUi components.
@@ -68,6 +68,6 @@ export type BaseDirectionTypesProps = {
  * @param {string} padding - Receive component margin. ex 10, 10, 10, 10 or only 10 to apply the same value on all sides
  */
 export type BaseSpacingTypesProps = {
-	padding: string
-	margin: string
-}
+  padding?: string;
+  margin?: string;
+};
