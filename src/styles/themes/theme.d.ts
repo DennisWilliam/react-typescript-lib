@@ -12,6 +12,7 @@ export type ThemeApp = {
   secondary: string;
   background: string;
   primary_text: string;
+  primary_background_text: string;
   secondary_text: string;
   tertiary_text: string;
   quaternary_text: string;

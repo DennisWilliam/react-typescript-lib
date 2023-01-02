@@ -1,5 +1,5 @@
 import BasePageStory from '@story/base/BasePageStory'
-import ThemeContextProvider, { ThemeContext } from '@themes/contexts'
+import { ThemeContext } from '@themes/contexts'
 import { ThemeContextProps } from '@themes/contexts/types'
 import { useContext } from 'react'
 import { createBrowserRouter, createRoutesFromElements, Link, Outlet, Route, RouterProvider } from 'react-router-dom'
@@ -27,12 +27,11 @@ const router = createBrowserRouter(
 
 function App() {
 	const { theme } = useContext<ThemeContextProps>(ThemeContext)
-
 	return (
-		<ThemeContextProvider>
+		<>
 			<Global theme={theme} />
 			<RouterProvider router={router} />
-		</ThemeContextProvider>
+		</>
 	)
 }
 

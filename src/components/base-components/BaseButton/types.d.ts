@@ -1,4 +1,5 @@
 import { BaseSpacingTypesProps, BaseTypesProps } from "@base/BaseTypes/types";
+import { ButtonHTMLAttributes, DOMAttributes } from "react";
 
 export type BaseButtonProps = Pick<
   BaseTypesProps,
@@ -16,7 +17,8 @@ export type BaseButtonProps = Pick<
   | "alignChildrenY"
   | "borderRadius"
 > &
-  BaseSpacingTypesProps;
+  BaseSpacingTypesProps &
+  DOMAttributes<ButtonHTMLAttributes>;
 
 export type BaseButtonStyles = Pick<
   BaseBoxProps,

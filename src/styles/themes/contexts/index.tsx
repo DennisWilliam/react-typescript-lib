@@ -4,23 +4,25 @@ import { CommonsTheme, DarkTheme } from '..'
 import {
 	ThemeContextProps,
 	ThemeContextProviderProps,
-	ThemeProps,
+	ThemeProps
 } from './types'
 
 export const ThemeContext = createContext<ThemeContextProps>({
 	theme: CommonsTheme,
-	toggleTheme: () => {},
+	toggleTheme: () => { },
 })
 
 const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
 	const [theme, setTheme] = useState<ThemeApp>(CommonsTheme)
 
 	const toggleTheme = (newTheme: ThemeProps) => {
+
 		switch (newTheme) {
 			case 'Commons':
 				return setTheme(CommonsTheme)
 			case 'Dark':
-				return setTheme(DarkTheme)
+				console.log("toggle", DarkTheme)
+				return setTheme({ ...DarkTheme })
 			default:
 				return setTheme(CommonsTheme)
 		}

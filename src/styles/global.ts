@@ -32,6 +32,7 @@ export default createGlobalStyle<GlobalProps>`
    }
 
 	 :root {
+		
 		width: 100%;
 		height: 100%;
 		//Global
@@ -45,6 +46,7 @@ export default createGlobalStyle<GlobalProps>`
 		--disable:${({ theme }) => theme.disable};
 		--disable-text:${({ theme }) => theme.disable_text};
 		--transparent:${({ theme }) => theme.transparent};
+		--primary-background-text:${({ theme }) => theme.primary_background_text};
 
 		//Messages
 		--success:(${({ theme }) => theme.primary});

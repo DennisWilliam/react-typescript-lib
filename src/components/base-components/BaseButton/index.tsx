@@ -5,7 +5,7 @@ import { BaseButtonProps } from './types'
 
 const BaseButton: React.FC<BaseButtonProps> = ({
 	id,
-	color = "",
+	color = "primary_background_text",
 	width = "fit-content",
 	height = "40px",
 	backgroundColor = 'primary',
@@ -17,7 +17,8 @@ const BaseButton: React.FC<BaseButtonProps> = ({
 	borderRadius,
 	alignChildrenX,
 	alignChildrenY,
-	disabled = false
+	disabled = false,
+	onClick,
 }) => {
 
 	if (border && !borderColor) {
@@ -39,6 +40,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
 			alignChildrenX={alignChildrenX}
 			alignChildrenY={alignChildrenY}
 			disabled={disabled}
+			onClick={onClick}
 		>
 			{children}
 		</StyContainer>
