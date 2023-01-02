@@ -1,28 +1,36 @@
+import { throwComponentValidationError } from '@base-functions/utils'
 import React from 'react'
 import { StyContainer } from './styles'
 import { BasePageProps } from './types'
 
 const BasePage: React.FC<BasePageProps> = ({
 	id,
-	width,
-	height,
+	width = '100%',
+	height = '100%',
 	backgroundColor = 'transparent',
 	margin,
 	padding,
 	children,
-	borderRadius,
-	borderWidth,
+	border,
+	alignChildrenX = "center",
+	alignChildrenY = "center",
+	borderColor
 }) => {
+	if (border && !borderColor) {
+		throwComponentValidationError("Invalid props", "To use border is obrigatory inform border and borderColor props!")
+	}
 	return (
 		<StyContainer
 			id={id}
 			width={width}
 			height={height}
 			backgroundColor={backgroundColor}
-			borderRadius={borderRadius}
-			borderWidth={borderWidth}
+			border={border}
 			margin={margin}
 			padding={padding}
+			alignChildrenX={alignChildrenX}
+			alignChildrenY={alignChildrenY}
+			borderColor={borderColor}
 		>
 			{children}
 		</StyContainer>

@@ -24,6 +24,7 @@
       "@base-functions/*": ["./components/base-functions/*"],
       "@themes/*": ["./styles/themes/*"],
       "@story/*": ["./stories/*"]
+      // "@base-styles/*": ["./components/base-styles/*"]
     }
   },
   "include": ["src"],

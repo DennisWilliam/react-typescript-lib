@@ -1,19 +1,20 @@
 type ThemeInteractions = {
-	hoverAndSelection: string
-	hoverAndSelectionPrimary: string
-	hoverAndSelectionSecondary: string
-	disable: string
-	disableText: string
-}
+  hover_and_selection: string;
+  hover_and_selection_primary: string;
+  hover_and_selection_secondary: string;
+  disable: string;
+  disable_text: string;
+};
 
 export type ThemeApp = {
-	header: string
-	primary: string
-	secondary: string
-	background: string
-	primaryText: string
-	secondaryText: string
-	tertiaryText: string
-	quaternaryText: string
-	inputColor: string
-} & ThemeInteractions
+  header: string;
+  primary: string;
+  secondary: string;
+  background: string;
+  primary_text: string;
+  secondary_text: string;
+  tertiary_text: string;
+  quaternary_text: string;
+  inputColor: string;
+  transparent: "transparent";
+} & ThemeInteractions;

@@ -1,8 +1,6 @@
 import { BaseSpacingTypesProps, BaseTypesProps } from "@base/BaseTypes/types";
 
-export type BaseBoxProps = {
-  borderRadius?: string;
-} & Pick<
+export type BaseButtonProps = Pick<
   BaseTypesProps,
   | "id"
   | "key"
@@ -16,10 +14,11 @@ export type BaseBoxProps = {
   | "borderColor"
   | "alignChildrenX"
   | "alignChildrenY"
+  | "borderRadius"
 > &
   BaseSpacingTypesProps;
 
-export type BaseBoxStyles = Pick<
+export type BaseButtonStyles = Pick<
   BaseBoxProps,
   | "borderRadius"
   | "backgroundColor"

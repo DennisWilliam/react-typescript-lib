@@ -12,6 +12,7 @@ export default defineConfig({
       "@icons": path.resolve(__dirname, "src/components/icons"),
       "@themes": path.resolve(__dirname, "src/styles/themes"),
       "@story": path.resolve(__dirname, "src/stories"),
+      //"@base-style": path.resolve(__dirname, "src/components/base-styles"),
       "@base-functions": path.resolve(
         __dirname,
         "src/components/base-functions"

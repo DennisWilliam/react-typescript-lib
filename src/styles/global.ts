@@ -1,6 +1,6 @@
-import { baseFontFamily } from '@base/BaseTypography'
-import { createGlobalStyle } from 'styled-components'
-import GlobalProps from './types'
+import { baseFontFamily } from "@base/BaseTypography";
+import { createGlobalStyle } from "styled-components";
+import GlobalProps from "./types";
 
 export default createGlobalStyle<GlobalProps>`
    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,500,600,700&display=swap');
@@ -32,22 +32,31 @@ export default createGlobalStyle<GlobalProps>`
    }
 
 	 :root {
+		width: 100%;
+		height: 100%;
 		//Global
-		--primary-hst:${({ theme }) => theme.primary}
-		--secondary:${({ theme }) => theme.secondary}
-		--background:${({ theme }) => theme.background}
-		--primary-text:${({ theme }) => theme.primaryText}
-		--secondary-text:${({ theme }) => theme.secondary}
-		--tertiary-text:${({ theme }) => theme.tertiaryText}
-		--quaternary-text:${({ theme }) => theme.quaternaryText}
-		--disable:${({ theme }) => theme.disable}
-		--disable-text:${({ theme }) => theme.disableText}
+		--primary:${({ theme }) => theme.primary};
+		--secondary:${({ theme }) => theme.secondary};
+		--background:${({ theme }) => theme.background};
+		--primary-text:${({ theme }) => theme.primary_text};
+		--secondary-text:${({ theme }) => theme.secondary};
+		--tertiary-text:${({ theme }) => theme.tertiary_text};
+		--quaternary-text:${({ theme }) => theme.quaternary_text};
+		--disable:${({ theme }) => theme.disable};
+		--disable-text:${({ theme }) => theme.disable_text};
+		--transparent:${({ theme }) => theme.transparent};
 
 		//Messages
-		--success:(${({ theme }) => theme.primary})
-		--error:(${({ theme }) => theme.primary})
-		--warning:(${({ theme }) => theme.primary})
-		--info:(${({ theme }) => theme.primary})
+		--success:(${({ theme }) => theme.primary});
+		--error:(${({ theme }) => theme.primary});
+		--warning:(${({ theme }) => theme.primary});
+		--info:(${({ theme }) => theme.primary});
 	 }
 
-`
+	 #root , body {
+		width: 100%;
+		height: 100%;
+	 }
+
+	 
+`;

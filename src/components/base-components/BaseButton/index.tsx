@@ -1,14 +1,14 @@
 import { throwComponentValidationError } from '@base-functions/utils'
 import React from 'react'
 import { StyContainer } from './styles'
-import { BaseBoxProps } from './types'
+import { BaseButtonProps } from './types'
 
-const BaseBox: React.FC<BaseBoxProps> = ({
+const BaseButton: React.FC<BaseButtonProps> = ({
 	id,
-	color,
-	width = "400px",
-	height = "150px",
-	backgroundColor = 'transparent',
+	color = "",
+	width = "fit-content",
+	height = "40px",
+	backgroundColor = 'primary',
 	margin = "10px",
 	padding = "10px",
 	children,
@@ -17,7 +17,7 @@ const BaseBox: React.FC<BaseBoxProps> = ({
 	borderRadius,
 	alignChildrenX,
 	alignChildrenY,
-	disabled
+	disabled = false
 }) => {
 
 	if (border && !borderColor) {
@@ -38,10 +38,11 @@ const BaseBox: React.FC<BaseBoxProps> = ({
 			borderRadius={borderRadius}
 			alignChildrenX={alignChildrenX}
 			alignChildrenY={alignChildrenY}
+			disabled={disabled}
 		>
 			{children}
 		</StyContainer>
 	)
 }
 
-export default BaseBox
+export default BaseButton

@@ -1,18 +1,19 @@
 import { BaseSpacingTypesProps, BaseTypesProps } from "@base/BaseTypes/types";
 
-export type BasePageProps = {
-  borderRadius?: string;
-  borderWidth?: string;
-  backgroundColor?:
-    | string
-    | "--primary-text"
-    | "--secondary-text"
-    | "--tertiary-text"
-    | "--quaternaryText"
-    | "--info"
-    | "--warning"
-    | "--error";
-} & Pick<BaseTypesProps, "id" | "key" | "children" | "width" | "height"> &
+export type BasePageProps = Pick<
+  BaseTypesProps,
+  | "id"
+  | "key"
+  | "children"
+  | "width"
+  | "height"
+  | "alignChildrenX"
+  | "alignChildrenY"
+  | "border"
+  | "borderColor"
+  | "backgroundColor"
+  | "color"
+> &
   BaseSpacingTypesProps;
 
 export type BasePageStyles = { enableShadow: boolean } & Pick<
@@ -24,4 +25,5 @@ export type BasePageStyles = { enableShadow: boolean } & Pick<
   | "height"
   | "margin"
   | "padding"
+  | "color"
 >;

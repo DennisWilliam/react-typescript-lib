@@ -19,8 +19,8 @@ const Root = () => {
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path='/' element={<Root />}>
-			<Route index element={<BasePageStory />} />
+		<Route path='/' element={<BasePageStory />} >
+			<Route index path='/base-page-story' element={<BasePageStory />} />
 		</Route>
 	)
 )
