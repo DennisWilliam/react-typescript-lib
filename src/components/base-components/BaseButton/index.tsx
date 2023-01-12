@@ -17,8 +17,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
 	borderRadius,
 	alignChildrenX,
 	alignChildrenY,
-	disabled = false,
-	onClick,
+	...props
 }) => {
 
 	if (border && !borderColor) {
@@ -26,6 +25,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
 	}
 
 	return (
+
 		<StyContainer
 			id={id}
 			color={color}
@@ -39,8 +39,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
 			borderRadius={borderRadius}
 			alignChildrenX={alignChildrenX}
 			alignChildrenY={alignChildrenY}
-			disabled={disabled}
-			onClick={onClick}
+			{...props}
 		>
 			{children}
 		</StyContainer>

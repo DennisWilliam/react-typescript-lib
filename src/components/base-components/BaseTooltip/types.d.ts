@@ -1,8 +1,12 @@
 import { BaseTypesProps } from "@base/BaseTypes/types";
 
-export type BaseTextProps = {
+export type BaseTooltipProps = {
   text: string | number;
-} & Omit<BaseTypesProps<HTMLSpanElement>, "children" | "label">;
+} & BaseTypesProps<HTMLDivElement>;
+
+export type CheckboxSvgProps = {
+  boxClass?: "box-checked" | "box-unchecked";
+};
 
 /*
 export type BaseTextStyles = Pick<

@@ -1,4 +1,4 @@
-import { BaseFontWeight } from "@base/BaseTypography/types";
+import { BaseFontSize, BaseFontWeight } from "@base/BaseTypography/types";
 import { ThemeApp } from "@themes/theme";
 
 /**
@@ -25,12 +25,12 @@ export type BaseDisableColors = keyof Pick<
  * @param {string | number} height - The author of the book.
  * @param {React.ReactNode} children - The author of the book.
  */
-export type BaseTypesProps = {
+export type BaseTypesProps<T> = {
   key?: string | number;
   label?: string | number;
-  fontSize?: number | string;
+  fontSize?: BaseFontSize;
   color?: keyof ThemeApp;
-  fontWeight?: keyof BaseFontWeight | string;
+  fontWeight?: BaseFontWeight;
   width?: string | number;
   height?: string | number;
   alignChildrenX?: BaseDirectionTypesProps;
@@ -41,7 +41,8 @@ export type BaseTypesProps = {
   border?: boolean;
   borderColor?: BaseDisableColors;
   borderRadius?: string;
-} & BaseRequiredTypesProps &
+} & React.HtmlHTMLAttributes<T> &
+  BaseRequiredTypesProps &
   BaseInteractionsTypesProps;
 
 /**

@@ -9,9 +9,9 @@ import {
   addFlexAlignY,
   addPadding,
 } from "../../base-styles";
-import { BaseBoxStyles } from "./types";
+import { BaseBoxProps } from "./types";
 
-export const StyContainer = styled.div<BaseBoxStyles>`
+export const StyContainer = styled.div<BaseBoxProps>`
   width: ${({ width }) => (width ? width : "fit-content")};
   height: ${({ height }) => (height ? height : "fit-content")};
 

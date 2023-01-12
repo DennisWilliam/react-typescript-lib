@@ -1,5 +1,5 @@
 import { BaseSpacingTypesProps, BaseTypesProps } from "@base/BaseTypes/types";
-
+/*
 export type BasePageProps = Pick<
   BaseTypesProps,
   | "id"
@@ -14,8 +14,11 @@ export type BasePageProps = Pick<
   | "backgroundColor"
   | "color"
 > &
-  BaseSpacingTypesProps;
+  BaseSpacingTypesProps;*/
 
+export type BasePageProps = Omit<BaseTypesProps<HTMLDivElement>, "label"> &
+  BaseSpacingTypesProps;
+/*
 export type BasePageStyles = { enableShadow: boolean } & Pick<
   BasePageProps,
   | "borderRadius"
@@ -27,3 +30,4 @@ export type BasePageStyles = { enableShadow: boolean } & Pick<
   | "padding"
   | "color"
 >;
+*/

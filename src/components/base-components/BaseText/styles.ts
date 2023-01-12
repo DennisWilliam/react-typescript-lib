@@ -1,16 +1,18 @@
 //import { baseFontSizeDefault } from '@typography/types'
-import { baseFontSizeDefault } from '@base/BaseTypography'
-import styled, { css } from 'styled-components'
-import { BaseTextStyles } from './types'
 
-export const StyContainer = styled.span<BaseTextStyles>`
-	color: ${({ color }) => (color ? color : '#000')};
-	width: ${({ width }) => (width ? width : 'fit-content')};
-	height: ${({ height }) => (height ? height : 'fit-content')};
-	font-size: ${({ fontSize }) => (fontSize ? fontSize : baseFontSizeDefault)};
-	${({ fontWeight }) =>
-		fontWeight &&
-		css`
-			font-weight: ${fontWeight.toString()};
-		`}
-`
+import styled, { css } from "styled-components";
+import { BaseTextProps } from "./types";
+//TODO ARRUMAR INPORTS DE BASE STYLES
+import { addColor, addFontSize } from "../../base-styles";
+
+export const StyContainer = styled.span<BaseTextProps>`
+  ${({ color }) => addColor(color)};
+  ${({ fontSize }) => addFontSize(fontSize)}
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  ${({ fontWeight }) =>
+    fontWeight &&
+    css`
+      font-weight: ${fontWeight.toString()};
+    `}
+`;

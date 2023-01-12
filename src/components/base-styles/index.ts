@@ -1,8 +1,15 @@
 import { convertThemeColorValue } from "@base-functions/utils";
 import { BaseSpacingTypesProps, BaseTypesProps } from "@base/BaseTypes/types";
+
 import { css } from "styled-components";
 
-type BaseStylesTypesProps = BaseTypesProps & BaseSpacingTypesProps;
+type BaseStylesTypesProps = BaseTypesProps<unknown> & BaseSpacingTypesProps;
+
+export const addFontSize = (fontSize: BaseStylesTypesProps["fontSize"]) =>
+  fontSize &&
+  css`
+    font-size: ${fontSize};
+  `;
 
 export const addMargin = (margin: BaseStylesTypesProps["margin"]) =>
   margin &&

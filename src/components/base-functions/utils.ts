@@ -44,7 +44,6 @@ export function convertThemeColorValue(
   cssColor: keyof ThemeApp | undefined
 ): string {
   const cssColorTransform = cssColor?.replaceAll("_", "-");
-  console.log(cssColorTransform);
   return cssColor ? `var(--${cssColorTransform})` : "transparent";
 }
 

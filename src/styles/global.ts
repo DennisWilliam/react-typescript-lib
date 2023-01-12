@@ -47,6 +47,7 @@ export default createGlobalStyle<GlobalProps>`
 		--disable-text:${({ theme }) => theme.disable_text};
 		--transparent:${({ theme }) => theme.transparent};
 		--primary-background-text:${({ theme }) => theme.primary_background_text};
+		--input-color:${({ theme }) => theme.input_color};
 
 		//Messages
 		--success:(${({ theme }) => theme.primary});

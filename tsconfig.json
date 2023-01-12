@@ -23,7 +23,8 @@
       "@typography/*": ["./components/base-components/BaseTypography/*"],
       "@base-functions/*": ["./components/base-functions/*"],
       "@themes/*": ["./styles/themes/*"],
-      "@story/*": ["./stories/*"]
+      "@story/*": ["./stories/*"],
+      "@modular/*": ["./components/modular/*"]
       // "@base-styles/*": ["./components/base-styles/*"]
     }
   },

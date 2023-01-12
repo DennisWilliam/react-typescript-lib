@@ -5,14 +5,14 @@ import { BaseTextProps } from './types'
 
 const BaseText: React.FC<BaseTextProps> = ({
 	id,
-	color,
-	fontSize,
-	fontWeight,
+	color = "primary_text",
+	fontSize = "12px",
+	fontWeight = "400",
 	text,
-	width,
-	height,
-	disabled = false,
-	textColor = '--primary-text',
+	width = "fit-content",
+	height = "fit-content",
+	disabled = true,
+	...props
 }) => {
 	return (
 		<StyContainer
@@ -23,6 +23,8 @@ const BaseText: React.FC<BaseTextProps> = ({
 			width={width}
 			height={height}
 			disableColor={checkDisableText(disabled)}
+			text={text}
+			{...props}
 		>
 			{text}
 		</StyContainer>

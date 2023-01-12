@@ -14,7 +14,8 @@ const BasePage: React.FC<BasePageProps> = ({
 	border,
 	alignChildrenX = "center",
 	alignChildrenY = "center",
-	borderColor
+	borderColor,
+	...props
 }) => {
 	if (border && !borderColor) {
 		throwComponentValidationError("Invalid props", "To use border is obrigatory inform border and borderColor props!")
@@ -31,6 +32,7 @@ const BasePage: React.FC<BasePageProps> = ({
 			alignChildrenX={alignChildrenX}
 			alignChildrenY={alignChildrenY}
 			borderColor={borderColor}
+			{...props}
 		>
 			{children}
 		</StyContainer>

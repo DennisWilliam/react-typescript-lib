@@ -11,9 +11,9 @@ import {
   addMargin,
   addPadding,
 } from "../../base-styles";
-import { BaseButtonStyles } from "./types";
+import { BaseButtonProps } from "./types";
 
-export const StyContainer = styled.button<BaseButtonStyles>`
+export const StyContainer = styled.button<BaseButtonProps>`
   width: ${({ width }) => width};
   min-width: 100px;
   height: ${({ height }) => (height ? height : "fit-content")};

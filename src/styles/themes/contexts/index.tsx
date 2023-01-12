@@ -21,7 +21,6 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
 			case 'Commons':
 				return setTheme(CommonsTheme)
 			case 'Dark':
-				console.log("toggle", DarkTheme)
 				return setTheme({ ...DarkTheme })
 			default:
 				return setTheme(CommonsTheme)

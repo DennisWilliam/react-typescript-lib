@@ -1,8 +1,9 @@
 import { BaseTypesProps } from "@base/BaseTypes/types";
 
-export type BaseTextProps = {
+export type BaseInputProps = {
   text: string | number;
-} & Omit<BaseTypesProps<HTMLSpanElement>, "children" | "label">;
+  type?: React.HTMLInputTypeAttribute;
+} & Omit<BaseTypesProps<HTMLInputElement>, "children">;
 
 /*
 export type BaseTextStyles = Pick<

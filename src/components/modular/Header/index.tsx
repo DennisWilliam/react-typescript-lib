@@ -1,9 +1,11 @@
 import { throwComponentValidationError } from '@base-functions/utils'
+import BaseBox from '@base/BaseBox'
+import BaseText from '@base/BaseText'
 import React from 'react'
-import { StyContainer } from './styles'
+import { StyDivLogo } from './styles'
 import { BaseBoxProps } from './types'
 
-const BaseBox: React.FC<BaseBoxProps> = ({
+const Header: React.FC<BaseBoxProps> = ({
 	id,
 	key,
 	color,
@@ -26,25 +28,20 @@ const BaseBox: React.FC<BaseBoxProps> = ({
 	}
 
 	return (
-		<StyContainer
-			id={id}
-			key={key}
-			color={color}
-			width={width}
-			height={height}
-			backgroundColor={backgroundColor}
-			margin={margin}
-			padding={padding}
-			border={border}
-			borderColor={borderColor}
-			borderRadius={borderRadius}
-			alignChildrenX={alignChildrenX}
-			alignChildrenY={alignChildrenY}
-			{...props}
-		>
+
+		<BaseBox id='header-box' backgroundColor='primary' width={"100%"} alignChildrenX={'flex-start'} alignChildrenY={'center'}>
+			<StyDivLogo>
+				<span>
+					logo
+				</span>
+				<span>
+					<BaseText id='page-title' text={"Painel"} />
+				</span>
+			</StyDivLogo>
 			{children}
-		</StyContainer>
+		</BaseBox>
+
 	)
 }
 
-export default BaseBox
+export default Header

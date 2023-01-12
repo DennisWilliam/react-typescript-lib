@@ -16,6 +16,6 @@ export type ThemeApp = {
   secondary_text: string;
   tertiary_text: string;
   quaternary_text: string;
-  inputColor: string;
+  input_color: string;
   transparent: "transparent";
 } & ThemeInteractions;
